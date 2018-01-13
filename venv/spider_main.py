@@ -1,4 +1,5 @@
 # coding: utf8
+import url_manager, html_downloader, html_parser, html_outputer
 
 class SpiderMain(object):
     def __init__(self):
@@ -28,6 +29,6 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__ == '__main__':
-    root_url = ""
+    root_url = "https://baike.baidu.com/item/python/407313"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
