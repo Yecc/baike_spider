@@ -1,4 +1,6 @@
 # coding: utf8
 
 class HtmlParser(object):
-    pass
+
+    def parse(self):
+        pass
