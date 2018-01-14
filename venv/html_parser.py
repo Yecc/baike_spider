@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import urlparse
 import re
+
 class HtmlParser(object):
 
     def _get_new_urls(self,page_url,soup):
