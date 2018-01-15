@@ -8,7 +8,7 @@ class HtmlParser(object):
     def _get_new_urls(self,page_url,soup):
         new_urls = set()
         #https://movie.douban.com/subject/25805741/?from=subject-page
-        links = soup.find_all('a', href = re.compile(r"/subject/\d+\/\?from=subject-page\S?>"))
+        links = soup.find_all('a', href = re.compile(r"/subject/\d+\/\?from=subject-page"))
         for link in links:
             new_url = link['href']
             new_urls.add(new_url)
