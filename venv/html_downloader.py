@@ -13,4 +13,3 @@ class HtmlDownloader(object):
             return None
 
         return response.read()
-
