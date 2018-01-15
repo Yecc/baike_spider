@@ -14,9 +14,10 @@ class SpiderMain(object):
         while self.urls.has_new_url():
             try:
                 new_url = self.urls.get_new_url()
-                print 'craw %d : %s' % (count, new_url)
+                print '1'
                 html_cont = self.downloader.download(new_url)
                 new_urls, new_data = self.parser.parse(new_url,html_cont)
+                print 'craw %d : %s, %s' % (count, new_data['title'], new_url)
                 self.urls.add_new_urls(new_urls)
                 self.outputer.collect_data(new_data)
 
@@ -29,6 +30,6 @@ class SpiderMain(object):
         self.outputer.output_html()
 
 if __name__ == '__main__':
-    root_url = "https://baike.baidu.com/item/python/407313"
+    root_url = "https://movie.douban.com/subject/26862259/"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
