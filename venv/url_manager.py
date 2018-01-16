@@ -22,8 +22,6 @@ class UrlManager(object):
         return len(self.new_urls) != 0
 
     def get_new_url(self):
-        print '----------------------------'
-        print self.new_urls
         new_url = self.new_urls.pop()
         self.old_urls.add(new_url)
         return new_url
