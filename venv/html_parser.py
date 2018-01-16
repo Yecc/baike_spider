@@ -5,9 +5,6 @@ import re
 
 class HtmlParser(object):
 
-    def _has_no_class(self,soup):
-        return
-
     def _get_new_urls(self,page_url,soup):
         new_urls = set()
         #https://movie.douban.com/subject/25805741/?from=subject-page，class_=True
